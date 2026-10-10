@@ -75,6 +75,18 @@ a{color:var(--accent-2)}
 .proof span{font-size:14px;color:var(--muted)}
 @media (max-width:600px){.frames,.proof{grid-template-columns:1fr}}
 
+/* Рилсы */
+.reels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.reels figure{margin:0;display:grid;gap:8px;min-width:0}
+.reels video{display:block;width:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
+.reels figcaption{display:grid;gap:2px;font-size:14px}
+.reels figcaption b{font-weight:700}
+.reels figcaption span{color:var(--muted)}
+.strip{margin:0;display:grid;gap:8px}
+.strip img{display:block;width:100%;max-width:100%;border-radius:12px;border:1px solid var(--line)}
+.strip figcaption{font-size:14px;color:var(--muted)}
+@media (max-width:600px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 /* Как выбирают барбершоп */
 .why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .why div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
@@ -202,6 +214,8 @@ ol.steps p{color:var(--muted);font-size:15px}
   .pack,.item,.box,.why div,.req li,ol.steps li,tr,figure,.contact,.note,.sources,.bundle,.svc-group,.pay,.tier,.rules > div,.proof{break-inside:avoid}
   .svc-group{break-after:avoid}
   .web-only{display:none!important}
+  .print-only{display:block!important}
+  .strip{display:grid!important}
   .pkg,.support{break-before:page}
 }
 </style>
@@ -228,22 +242,37 @@ ol.steps p{color:var(--muted);font-size:15px}
 
   <section>
     <span class="mono">Уже сделано для вас</span>
-    <h2>Сайт и рилсы MensFire</h2>
+    <h2>Сайт MensFire уже работает</h2>
     <p class="sub">Для вашего барбершопа уже работает живой сайт с AI-видео на первом экране. Посетитель листает страницу, бритва в руке мастера проходит по затылку, и буква за буквой открывается название MENSFIRE. Ниже настоящие цены из YCLIENTS, мастера с фото и отзывами и кнопка записи к каждому мастеру.</p>
     <div class="frames">
       <figure><img src="assets/mf-hero-start.jpg" alt="Первый экран сайта MensFire: затылок в пене, бритва, заголовок «Мужская стрижка по красоте»"><figcaption>Начало прокрутки: бритва только начала путь</figcaption></figure>
       <figure><img src="assets/mf-hero-end.jpg" alt="Конец первого экрана: надпись MENSFIRE открыта, заголовок «Чёткие линии. Никакой спешки» и кнопки записи"><figcaption>Конец прокрутки: название открыто, кнопка «Записаться»</figcaption></figure>
       <figure><img src="assets/mf-masters.jpg" alt="Раздел мастеров: четыре карточки с фото, уровнем, отзывами и кнопкой записи к мастеру"><figcaption>Мастера: фото, уровень, отзывы, запись к конкретному барберу</figcaption></figure>
       <figure><img src="assets/mf-prices.jpg" alt="Раздел цен: вкладки «Барбер» и «Эксперт-барбер», услуги с длительностью и ценой"><figcaption>Цены: две категории мастеров, время и стоимость до записи</figcaption></figure>
-      <figure class="wide"><img src="assets/mf-reels.jpg" alt="Шесть рилсов MensFire: «Досмотри до последней буквы», «Звук, от которого мурашки», «4 барбера. 192 отзыва», «Это не спа. Это стрижка», «Папа + сын», «Сколько стоит стрижка»"><figcaption>Шесть рилсов в стиле сайта: у каждого свой хук и кнопка записи в финале</figcaption></figure>
     </div>
     <div class="proof">
       <div><b>0,3 с</b><span>загрузка страницы, замер на живом сайте</span></div>
       <div><b>15 услуг</b><span>прайс из вашей онлайн-записи, правится в одном файле</span></div>
-      <div><b>6 рилсов</b><span>собраны из материалов сайта без дополнительных затрат</span></div>
+      <div><b>6 рилсов</b><span>шесть хуков и шесть разных картинок, кнопка записи в каждом</span></div>
     </div>
     <p class="note web-only">Живой сайт: <a href="https://shatskihton-boop.github.io/mensfire/">shatskihton-boop.github.io/mensfire</a>. Откройте на телефоне и пролистайте первый экран. Видео создано AI, фото интерьера и работ можно заменить на ваши.</p>
     <p class="note print-only">Живой сайт: shatskihton-boop.github.io/mensfire. Видео создано AI, фото интерьера и работ можно заменить на ваши.</p>
+  </section>
+
+  <section>
+    <span class="mono">Рилсы</span>
+    <h2>Шесть рилсов, шесть разных хуков</h2>
+    <p class="sub">Каждый рилс цепляет в первые две секунды по-своему: интригой, звуком, доверием, иронией, поводом или ценой. У каждого своя картинка, ни одна не повторяется. В финале кнопка «Записаться онлайн» и адрес. Рилсы короткие, 8–10 секунд, их досматривают и пересматривают.</p>
+    <div class="reels web-only">
+        <figure><video src="assets/reel-1-bukvy.mp4" poster="assets/reel-1-bukvy.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Рилс «Досмотри до последней буквы»"></video><figcaption><b>«Досмотри до последней буквы»</b><span>Интрига: бритва открывает название</span></figcaption></figure>
+        <figure><video src="assets/reel-2-asmr.mp4" poster="assets/reel-2-asmr.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Рилс «Звук, от которого мурашки»"></video><figcaption><b>«Звук, от которого мурашки»</b><span>ASMR: пена и пар, звук в приложении</span></figcaption></figure>
+        <figure><video src="assets/reel-3-mastera.mp4" poster="assets/reel-3-mastera.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Рилс «4 барбера. 192 отзыва.»"></video><figcaption><b>«4 барбера. 192 отзыва.»</b><span>Доверие: мастера, фото и отзывы</span></figcaption></figure>
+        <figure><video src="assets/reel-4-ne-spa.mp4" poster="assets/reel-4-ne-spa.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Рилс «Это не спа. Это стрижка.»"></video><figcaption><b>«Это не спа. Это стрижка.»</b><span>Ирония: горячее полотенце и бритва</span></figcaption></figure>
+        <figure><video src="assets/reel-5-papa-syn.mp4" poster="assets/reel-5-papa-syn.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Рилс «Папа + сын = 2 100 ₽»"></video><figcaption><b>«Папа + сын = 2 100 ₽»</b><span>Повод прийти вдвоём</span></figcaption></figure>
+        <figure><video src="assets/reel-6-cena.mp4" poster="assets/reel-6-cena.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Рилс «Сколько стоит стрижка?»"></video><figcaption><b>«Сколько стоит стрижка?»</b><span>Цена без сюрпризов</span></figcaption></figure>
+    </div>
+    <figure class="strip print-only"><img src="assets/mf-reels.jpg" alt="Кадры шести рилсов MensFire"><figcaption>Кадры шести рилсов: у каждого свой хук и своя картинка</figcaption></figure>
+    <p class="note">Три рилса собраны из материалов сайта, для трёх созданы новые картинки-хуки: ряд кресел, горячее полотенце, папа и сын. Изображения созданы AI. Музыку и звук лучше добавить в самом Instagram из трендов.</p>
   </section>
 
   <section>
@@ -293,7 +322,7 @@ ol.steps p{color:var(--muted);font-size:15px}
       <div class="svc-group">Рилсы</div>
       <div class="item"><h3>Монтаж рилса из ваших видео</h3><span class="cost">2 400 ₽</span><p>Вы снимаете стрижку на телефон, я монтирую: хук в первые секунды, фирменные титры, кнопка записи в финале.</p><span class="for"><b>Кому:</b> барбершопу, где мастера снимают процесс сами.</span></div>
       <div class="item"><h3>Рилс под ключ с AI-сценой</h3><span class="cost">6 000 ₽</span><p>Без съёмки: сцена создаётся AI в стиле вашего сайта, плюс хук, титры и запись. Пример: «Досмотри до последней буквы».</p></div>
-      <div class="item"><h3>Пакет 6 рилсов</h3><span class="cost">36 000 ₽</span><p>Шесть разных хуков в одном стиле: доверие, цена, ASMR, предложение для двоих. Обложки и тексты подписей входят. Пример: шесть рилсов MensFire выше.</p></div>
+      <div class="item"><h3>Пакет 6 рилсов</h3><span class="cost">36 000 ₽</span><p>Шесть разных хуков в одном стиле: интрига, ASMR, доверие, ирония, предложение для двоих, цена. Своя картинка под каждый хук, без повторов. Обложки и тексты подписей входят. Пример: шесть рилсов MensFire выше.</p></div>
       <div class="item"><h3>Месяц рилсов из ваших съёмок</h3><span class="cost">24 000 ₽</span><p>10 роликов в месяц из видео ваших мастеров: монтаж, хуки, титры, обложки, план публикаций.</p><span class="for"><b>Кому:</b> барбершопу, который хочет постоянный поток контента.</span></div>
       <div class="svc-group">Логотип и фирменный стиль</div>
       <div class="item"><h3>Логотип</h3><span class="cost">18 000 ₽</span><p>2–3 варианта на выбор, доработка выбранного. В векторе: чёткий и на вывеске, и на аватарке.</p></div>
@@ -464,5 +493,6 @@ ol.steps p{color:var(--muted);font-size:15px}
     <p>Поведение клиентов барбершопов: <a href="https://ardma.biz/marketing/obsluzhivanie-klientov/pochemu-klienty-uhodyat-posle-pervogo-poseshheniya-barbershopa/">ardma.biz, почему клиенты не возвращаются</a>; <a href="https://nanoglobals.com/barbershop-websites/">nanoglobals, 20 сайтов барбершопов</a>.</p>
   </section>
 </article>
+<script>if(matchMedia("(prefers-reduced-motion: reduce)").matches)document.querySelectorAll(".reels video").forEach(v=>{v.removeAttribute("autoplay");v.pause();v.controls=true});</script>
 </body>
 </html>
